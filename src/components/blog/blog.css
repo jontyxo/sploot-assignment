@@ -1,0 +1,55 @@
+.blogHead{
+    display: flex;
+  justify-content: center;
+    overflow-x: auto;
+}
+.blogHead::-webkit-scrollbar{
+    width:0;
+}
+.blogImg{
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.catName{
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color:#5d5757;
+}
+.blogCat{
+    margin: 1rem 1.5rem;
+
+    cursor: pointer;
+    display: flex;
+   align-items: center;
+    flex-direction: column;
+}
+.imgBlogData{
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.blogDataParent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px 2rem;
+}
+
+.blogData{
+    width: 23vw;
+    margin: 2rem 0rem;
+}
+.titleBlog{
+    width: 300px;
+    color:#3b4c59;
+}
+.descriptionBlog{
+    width: 300px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #72757b;
+}
