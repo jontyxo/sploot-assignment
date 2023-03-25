@@ -40,7 +40,7 @@ const Login = () => {
             <label>Email</label>
             <input type="email" name="email" required="true" ref={emailRef}></input>
             <label>Password</label>
-            <input type="text" name="password" required="true" ref={passwordRef}></input>
+            <input type="password" name="password" required="true" ref={passwordRef}></input>
             <button type="submit" className='loginbtn'>login</button>
         <p>{authToken}</p>
         </form>
