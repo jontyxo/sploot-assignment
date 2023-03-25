@@ -19,7 +19,7 @@
     color:#5d5757;
 }
 .blogCat{
-    margin: 1rem 1.5rem;
+    margin: 1rem 1.2rem;
 
     cursor: pointer;
     display: flex;
@@ -28,8 +28,8 @@
 }
 .imgBlogData{
     object-fit: cover;
-    width: 300px;
-    height: 300px;
+    width: 95%;
+    height: 250px;
     border-radius: 15px;
     cursor: pointer;
 }
