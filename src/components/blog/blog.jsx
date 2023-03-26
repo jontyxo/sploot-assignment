@@ -8,13 +8,14 @@ const Blog = () => {
     const [blog,setBlog]=useState([]);
     const [blogSlug,setBlogSlug]=useState('weekend-reads');
     const [blogCatData,setBlogCatData]=useState([]);
+    const [activeCat,setActiveCat]=useState(null);
   
 
 
 
     async function blogCat() {
         try {
-            const res =await  axios.get('https://api-staging-v2.sploot.space/api/v2/cms/post-categories', {
+            await  axios.get('https://api-staging-v2.sploot.space/api/v2/cms/post-categories', {
                 headers: { authorization: "Bearer " + authToken }
             }).then(res=>{
                 setBlog(res.data.data.data)
@@ -37,7 +38,7 @@ const Blog = () => {
             headers: { authorization: "Bearer " + authToken }
         });
         setBlogCatData(res.data.data.data);
-      
+     
     }
          
     useEffect( ()=>{
@@ -45,10 +46,10 @@ const Blog = () => {
 
     },[blogSlug])
 
-    const handleClick=(slug)=>{
+    const handleClick=async(slug,id)=>{
     setBlogSlug(slug);
-
-    blogCatgData();
+setActiveCat(id);
+     blogCatgData();
     }
   
 
@@ -57,7 +58,7 @@ const Blog = () => {
 
     <div className="blogHead">
         {blog.map((category) => (
-            <div key={category.id} className="blogCat" onClick={()=>handleClick(category.slug)}>
+            <div key={category.id} className={"blogCat"+ (activeCat===category.id?"Active":"")} onClick={()=>handleClick(category.slug,category.id)}>
               <img src={category.imageUrl} className='blogImg' alt={category.name} />
               <p className="catName">{category.name}</p>
             </div>
@@ -65,7 +66,11 @@ const Blog = () => {
           
     </div>
     <div className="blogDataParent">
-            {blogCatData.map((data)=>(
+            {blogCatData.length===0 ? (
+                <p className="blogdataerrmessage">No Posts here 😓</p>):
+            (
+
+                   blogCatData.map((data)=>(
          <div key={data.id} className="blogData">
             <img className='imgBlogData' src={data.imageUrl} onClick={()=>{
               
@@ -77,7 +82,10 @@ const Blog = () => {
 
          </div>
             ))
+            )
 }
+
+
     </div>
     </> 
   )
