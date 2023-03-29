@@ -54,4 +54,9 @@ h2{
     .formLogin{
         width:50vw; 
     }
+    .errMess{
+        position: relative;
+        text-align: center;
+        top: 10rem;
+      }
 }
