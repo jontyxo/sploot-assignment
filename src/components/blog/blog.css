@@ -55,6 +55,7 @@
     width: 95%;
     font-family: 'Noto Sans', sans-serif;
     color: #72757b;
+    word-wrap: break-word;
 }
 .blogCat:hover{
     border-bottom: 2px solid #c2c8d3;
