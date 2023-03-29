@@ -19,7 +19,6 @@ const Blog = () => {
                 headers: { authorization: "Bearer " + authToken }
             }).then(res=>{
                 setBlog(res.data.data.data)
-
             })
          
            
@@ -34,13 +33,20 @@ const Blog = () => {
      
     async function blogCatgData() {
        await blogCat();
+       try{
         const res = await axios.get(`https://api-staging-v2.sploot.space/api/v2/public/cms/post-categories/`+blogSlug  , {
             headers: { authorization: "Bearer " + authToken }
-        });
-        setBlogCatData(res.data.data.data);
-     
-    }
+         });
+         setBlogCatData(res.data.data.data);
          
+
+    }catch(err){
+
+    }
+           
+            
+        }
+        
     useEffect( ()=>{
         blogCatgData()
 
