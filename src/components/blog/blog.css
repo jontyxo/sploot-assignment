@@ -85,3 +85,11 @@ width: 80vw;
         justify-content: flex-start;
     }
 }
+@media screen and (min-width:451px) and (max-width:850px){
+    .blogData{
+        width: 60vw;
+            }
+            .blogHead{
+                justify-content: flex-start;
+            }
+}

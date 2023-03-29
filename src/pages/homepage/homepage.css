@@ -44,3 +44,23 @@
         font-size: 12px;
     }
 }
+
+@media screen and (min-width:451px) and (max-width:850px){
+    .logoutbtn{
+        padding: 10px 20px;
+        margin: 0px 1rem;
+        font-size:12px;
+    }
+    .headerBlog{
+        margin:1rem;
+    }
+    .userImage{
+        width: 40px;
+        height: 40px;
+    }
+    .username{
+        margin: 0.5rem 1rem;
+        font-family: cursive;
+        font-size: 15px;
+    }
+}
