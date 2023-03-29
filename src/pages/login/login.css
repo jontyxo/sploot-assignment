@@ -40,9 +40,9 @@ h2{
     cursor: pointer;
 }
 .errMess{
-    position: absolute;
-    bottom: 0;
-    right: 43vw;
+  position: relative;
+  text-align: center;
+  top: 5rem;
 }
 
 @media screen and (max-width:450px){
