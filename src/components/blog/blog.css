@@ -85,3 +85,9 @@
 .blogCat:nth-child(1)>p{
     margin-bottom: 0px;
 } */
+
+@media  screen and (max-width: 450px) {
+    .blogData{
+width: 80vw;
+    }
+}

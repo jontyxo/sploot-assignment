@@ -4,6 +4,9 @@
     margin: 1rem 2rem;
 }
 
+.userImage{
+    width: 50px;
+}
 .logoutbtn{
     border-style: none;
     background: #ff385c;
@@ -20,4 +23,24 @@
     margin: 1rem 2rem;
     font-family: cursive;
 
+}
+
+@media screen and (max-width:450px){
+    .logoutbtn{
+        padding:10px 15px;
+        margin: 0 2%;
+        font-size:8px;
+    }
+    .headerBlog{
+        margin:1rem;
+    }
+    .userImage{
+        width: 30px;
+        height: 30px;
+    }
+    .username{
+        margin: 0.5rem 1rem;
+        font-family: cursive;
+        font-size: 12px;
+    }
 }

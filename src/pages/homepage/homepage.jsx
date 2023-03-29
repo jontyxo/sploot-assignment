@@ -38,7 +38,7 @@ const Homepage = () => {
     <>
 
 <div className='headerBlog'>
-<img style={{width:'50px'}} src={userInfo.imgurl} />
+<img className='userImage' src={userInfo.imgurl} />
 
 <p className='username'>Hello, {userInfo.username}</p>
 <button onClick={handleLogout} className='logoutbtn'>Logout</button>
