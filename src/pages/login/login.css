@@ -45,7 +45,7 @@ h2{
     right: 43vw;
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:450px){
     .formLogin{
         width: 80vw;
     }
